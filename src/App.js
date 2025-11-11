@@ -329,7 +329,7 @@ export default function Portfolio() {
             </div>
           </div>
           <h1
-            className="md:text-5xl font-bold mb-4 animate-fade-in leading-relaxed pb-2"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in leading-[1.2] pb-3"
             style={{
               background:
                 "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
@@ -457,9 +457,6 @@ export default function Portfolio() {
             }}
           >
             <div className="flex items-start gap-4 mb-6">
-              <div className="p-3 bg-purple-500/20 rounded-lg">
-                <Code className="text-purple-400" size={32} />
-              </div>
               <div className="flex-1">
                 <h3 className="text-3xl font-bold text-purple-400 mb-2">
                   Board Game Companion App
