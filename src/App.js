@@ -344,6 +344,9 @@ export default function Portfolio() {
           <p className="text-lg md:text-xl text-gray-300 mb-4 animate-fade-in">
             Software Engineer
           </p>
+          <p className="text-base md:text-lg text-gray-400 mb-8 animate-fade-in">
+            With emphasize in User Experience & Digital Marketing
+          </p>
           <div className="flex gap-4 justify-center mb-12 animate-fade-in">
             <a
               href="https://github.com/btengland"
