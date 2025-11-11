@@ -383,12 +383,13 @@ export default function Portfolio() {
           </h2>
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I'm a software engineer specializing in React and modern web
+              I’m a software engineer specializing in React and modern web
               technologies. What sets me apart is my background in UX design and
-              digital marketing. I understand user flows and how to build
-              products that connect with people. For example, at Vitality IO, I
-              work closely with the backend team to make sure complex utility
-              data displays clearly for end users, not just developers.
+              digital marketing, which gives me a deep understanding of user
+              flows and how to build products that truly connect with people. In
+              my current role, I collaborate closely with the backend team to
+              ensure complex utility data is displayed clearly and intuitively
+              for end users; not just developers.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
               <div className="flex items-center gap-3">
@@ -710,7 +711,7 @@ export default function Portfolio() {
               className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/50"
               style={{
                 background:
-                  "linear-gradient(to right, #C084FC, #F9A8D4, #C084FC)",
+                  "linear-gradient(to right, #9B4DD5, #D977AA, #9B4DD5)",
               }}
             >
               Connect on LinkedIn
