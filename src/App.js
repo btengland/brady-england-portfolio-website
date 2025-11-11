@@ -124,7 +124,13 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+    <div
+      className="min-h-screen text-white"
+      style={{
+        background:
+          "linear-gradient(to bottom right, #0F172A, #581C87, #0F172A)",
+      }}
+    >
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -136,7 +142,14 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="text-2xl font-bold hover:scale-105 transition-transform"
+            style={{
+              background:
+                "linear-gradient(to right, #C084FC, #F472B6, #C084FC)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
           >
             BE
           </button>
@@ -182,11 +195,26 @@ export default function Portfolio() {
       >
         <div className="max-w-4xl text-center">
           <div className="mb-8 animate-fade-in">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-5xl font-bold">
+            <div
+              className="w-32 h-32 mx-auto mb-8 rounded-full flex items-center justify-center text-5xl font-bold"
+              style={{
+                background:
+                  "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              }}
+            >
               BE
             </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-fade-in leading-relaxed">
+          <h1
+            className="md:text-5xl font-bold mb-4 animate-fade-in leading-relaxed pb-2"
+            style={{
+              background:
+                "linear-gradient(to right, rgb(192, 132, 252), rgb(244, 114, 182), rgb(192, 132, 252))",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             Brady England
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-4 animate-fade-in">
@@ -297,7 +325,13 @@ export default function Portfolio() {
             <Code className="text-purple-400" />
             Featured Project
           </h2>
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl">
+          <div
+            className="backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl"
+            style={{
+              background:
+                "linear-gradient(to bottom right, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1))",
+            }}
+          >
             <div className="flex items-start gap-4 mb-6">
               <div className="p-3 bg-purple-500/20 rounded-lg">
                 <Code className="text-purple-400" size={32} />
@@ -452,7 +486,11 @@ export default function Portfolio() {
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-default"
+                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-default"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2))",
+                }}
               >
                 {skill}
               </span>
@@ -523,7 +561,11 @@ export default function Portfolio() {
               href="https://www.linkedin.com/in/bradyengland/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/50"
+              className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/50"
+              style={{
+                background:
+                  "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              }}
             >
               Connect on LinkedIn
             </a>
