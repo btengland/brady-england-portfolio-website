@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   Github,
   Linkedin,
-  Mail,
   Phone,
   MapPin,
   ChevronDown,
@@ -11,9 +10,12 @@ import {
   GraduationCap,
   Award,
 } from "lucide-react";
+import homeScreen from "./components/home_screen.png";
+import gameScreen from "./components/game_screen.png";
+import gameScreen2 from "./components/game_screen2.png";
+import gameScreen3 from "./components/game_screen3.png";
 
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -406,27 +408,49 @@ export default function Portfolio() {
             </div>
 
             {/* App Screenshots */}
-            <div className="flex justify-center gap-6 mb-6 flex-wrap">
+            <div className="flex justify-center gap-2 mb-6 flex-wrap">
               <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
                 <img
-                  src="https://i.imgur.com/placeholder1.jpg"
+                  src={homeScreen}
                   alt="Vantage Connect home screen with Host and Join game options"
                   className="w-full rounded-lg shadow-lg"
                   style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
                 />
                 <p className="text-xs text-gray-400 mt-3 text-center">
-                  Home screen
+                  Home Screen
                 </p>
               </div>
               <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
                 <img
-                  src="https://i.imgur.com/placeholder2.jpg"
+                  src={gameScreen}
                   alt="Game interface showing player info and real-time tracking"
                   className="w-full rounded-lg shadow-lg"
                   style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
                 />
                 <p className="text-xs text-gray-400 mt-3 text-center">
-                  Game tracking
+                  Game Tracking
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={gameScreen2}
+                  alt="Game interface showing player info and real-time tracking"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Game Tracking
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={gameScreen3}
+                  alt="Game interface showing player info and real-time tracking"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Game Tracking
                 </p>
               </div>
             </div>
