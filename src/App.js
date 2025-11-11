@@ -345,7 +345,7 @@ export default function Portfolio() {
             Software Engineer
           </p>
           <p className="text-base md:text-lg text-gray-400 mb-8 animate-fade-in">
-            leveraging expertise in User Experience & Digital Marketing
+            Leveraging expertise in user experience & digital marketing
           </p>
           <div className="flex gap-4 justify-center mb-12 animate-fade-in">
             <a
