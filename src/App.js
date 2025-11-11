@@ -193,8 +193,9 @@ export default function Portfolio() {
               background:
                 "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              color: "transparent",
+              WebkitTextFillColor: "transparent",
             }}
           >
             BE
@@ -223,6 +224,12 @@ export default function Portfolio() {
               className="hover:text-purple-400 transition-colors cursor-pointer"
             >
               Skills
+            </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Education
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -254,10 +261,12 @@ export default function Portfolio() {
           <h1
             className="md:text-5xl font-bold mb-4 animate-fade-in leading-relaxed pb-2"
             style={{
-              color: "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              background:
+                "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
               WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
               backgroundClip: "text",
+              color: "transparent",
+              WebkitTextFillColor: "transparent",
             }}
           >
             Brady England
@@ -368,7 +377,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
             <Code className="text-purple-400" />
-            Project
+            Featured Project
           </h2>
           <div
             className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl"
@@ -620,9 +629,11 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 text-center text-gray-400 border-t border-white/10">
-        <p>© 2025 Brady England. Built with React & Tailwind CSS.</p>
-      </footer>
+      <section id="contact" className="bg-slate-900/50">
+        <footer className="py-8 px-6 text-center text-gray-400 border-t border-white/10">
+          <p>© 2025 Brady England. Built with React & Tailwind CSS.</p>
+        </footer>
+      </section>
 
       <style jsx>{`
         @keyframes fade-in {
