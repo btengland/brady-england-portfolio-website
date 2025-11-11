@@ -5,6 +5,8 @@ import {
   Phone,
   MapPin,
   ChevronDown,
+  Menu,
+  X,
   Code,
   Briefcase,
   GraduationCap,
@@ -17,6 +19,7 @@ import gameScreen3 from "./components/game_screen3.png";
 
 export default function Portfolio() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -202,7 +205,7 @@ export default function Portfolio() {
           >
             BE
           </button>
-          <div className="flex gap-6">
+          <div className="hidden md:flex gap-6">
             <button
               onClick={() => scrollToSection("about")}
               className="hover:text-purple-400 transition-colors cursor-pointer"
@@ -240,7 +243,72 @@ export default function Portfolio() {
               Contact
             </button>
           </div>
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900/95">
+            <div className="flex flex-col items-center gap-4 py-4">
+              <button
+                onClick={() => {
+                  scrollToSection("about");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                About
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("experience");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("projects");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Project
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("skills");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("education");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Education
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("contact");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -397,12 +465,15 @@ export default function Portfolio() {
                   Board Game Companion App
                 </h3>
                 <p className="text-lg text-gray-300 mb-4">
-                  A mobile companion app for a Stonemaier Games board game. I
-                  reached out to the company to ask if I could build an app for
-                  one of their games, and they provided me with specifications
-                  and instructions. The app tracks game state in real-time
-                  across multiple devices, so players can see live updates from
-                  everyone at the table while playing with the physical board.
+                  A mobile companion app for a Stonemaier Games board game,
+                  built to let players use their physical copies to play
+                  remotely with others. I reached out to Stonemaier Games and
+                  received official specifications and guidelines for
+                  development. The app synchronizes game state in real time
+                  across devices so all players see live updates throughout the
+                  match. I also coordinated a 14-day playtesting period with 20
+                  testers, collected usability and gameplay feedback, and
+                  implemented improvements based on their insights.
                 </p>
               </div>
             </div>
@@ -477,8 +548,15 @@ export default function Portfolio() {
                 <li className="text-gray-300 flex gap-3">
                   <span className="text-purple-400 mt-1">▹</span>
                   <span>
-                    Players use the app alongside their physical board game for
-                    enhanced tracking
+                    Allows players to use the app alongside their physical board
+                    game for synchronized remote play
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Conducted a 14-day playtest with 20 testers and implemented
+                    feedback-driven improvements
                   </span>
                 </li>
               </ul>
