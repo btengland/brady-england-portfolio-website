@@ -649,6 +649,10 @@ export default function Portfolio() {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Professional UX
+                Design experience
+              </li>
+              <li className="flex gap-3">
                 <span className="text-purple-400">▹</span> Fluent in Spanish
               </li>
               <li className="flex gap-3">
