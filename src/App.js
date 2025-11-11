@@ -60,6 +60,52 @@ export default function Portfolio() {
     "Jules AI",
   ];
 
+  const projectTechnologies = [
+    "React Native",
+    "AWS Lambda",
+    "WebSockets",
+    "DynamoDB",
+    "Sentry",
+    "Cursor AI",
+    "Jules AI",
+  ];
+
+  const getSkillUrl = (skill) => {
+    const skillUrls = {
+      JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      React: "https://react.dev/",
+      "React Native": "https://reactnative.dev/",
+      TypeScript: "https://www.typescriptlang.org/",
+      Redux: "https://redux.js.org/",
+      Remix: "https://remix.run/",
+      Python: "https://www.python.org/",
+      Ruby: "https://www.ruby-lang.org/en/",
+      "C++": "https://isocpp.org/",
+      Java: "https://www.java.com/en/",
+      SQL: "https://en.wikipedia.org/wiki/SQL",
+      HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      SASS: "https://sass-lang.com/",
+      Tailwind: "https://tailwindcss.com/",
+      Bootstrap: "https://getbootstrap.com/",
+      Git: "https://git-scm.com/",
+      GitHub: "https://github.com/",
+      Docker: "https://www.docker.com/",
+      AWS: "https://aws.amazon.com/",
+      "AWS Lambda": "https://aws.amazon.com/lambda/",
+      Sentry: "https://sentry.io/",
+      Figma: "https://www.figma.com/",
+      Jira: "https://www.atlassian.com/software/jira",
+      "RESTful API": "https://restfulapi.net/",
+      WebSockets:
+        "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+      DynamoDB: "https://aws.amazon.com/dynamodb/",
+      "Cursor AI": "https://cursor.sh/",
+      "Jules AI": "https://jules.google/",
+    };
+    return skillUrls[skill] || "#";
+  };
+
   const experience = [
     {
       title: "Software Engineer",
@@ -145,7 +191,7 @@ export default function Portfolio() {
             className="text-2xl font-bold hover:scale-105 transition-transform"
             style={{
               background:
-                "linear-gradient(to right, #C084FC, #F472B6, #C084FC)",
+                "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -170,7 +216,7 @@ export default function Portfolio() {
               onClick={() => scrollToSection("projects")}
               className="hover:text-purple-400 transition-colors cursor-pointer"
             >
-              Projects
+              Project
             </button>
             <button
               onClick={() => scrollToSection("skills")}
@@ -208,8 +254,7 @@ export default function Portfolio() {
           <h1
             className="md:text-5xl font-bold mb-4 animate-fade-in leading-relaxed pb-2"
             style={{
-              background:
-                "linear-gradient(to right, rgb(192, 132, 252), rgb(244, 114, 182), rgb(192, 132, 252))",
+              color: "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -257,7 +302,7 @@ export default function Portfolio() {
             <Code className="text-purple-400" />
             About Me
           </h2>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
               I'm a software engineer specializing in React and modern web
               technologies. What sets me apart is my background in UX design and
@@ -291,7 +336,7 @@ export default function Portfolio() {
             {experience.map((job, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
               >
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                   <div>
@@ -323,13 +368,13 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
             <Code className="text-purple-400" />
-            Featured Project
+            Project
           </h2>
           <div
-            className="backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl"
+            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl"
             style={{
               background:
-                "linear-gradient(to bottom right, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1))",
+                "linear-gradient(to bottom right, rgba(192, 132, 252, 0.1), rgba(244, 114, 182, 0.1))",
             }}
           >
             <div className="flex items-start gap-4 mb-6">
@@ -449,27 +494,17 @@ export default function Portfolio() {
             </div>
 
             <div className="flex flex-wrap gap-2 mt-6">
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                React Native
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                AWS Lambda
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                WebSockets
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                DynamoDB
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                Sentry
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                Cursor AI
-              </span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50">
-                Jules AI
-              </span>
+              {projectTechnologies.map((tech, index) => (
+                <a
+                  key={index}
+                  href={getSkillUrl(tech)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50 hover:border-purple-400/80 transition-all"
+                >
+                  {tech}
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -484,19 +519,22 @@ export default function Portfolio() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
-              <span
+              <a
                 key={index}
-                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-default"
+                href={getSkillUrl(skill)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-pointer"
                 style={{
                   background:
-                    "linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2))",
+                    "linear-gradient(to right, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2))",
                 }}
               >
                 {skill}
-              </span>
+              </a>
             ))}
           </div>
-          <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="mt-12 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h3 className="text-2xl font-bold mb-4 text-purple-400">
               Additional Skills
             </h3>
@@ -532,7 +570,7 @@ export default function Portfolio() {
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
               >
                 <h3 className="text-2xl font-bold text-purple-400">
                   {edu.school}
@@ -564,7 +602,7 @@ export default function Portfolio() {
               className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/50"
               style={{
                 background:
-                  "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+                  "linear-gradient(to right, #C084FC, #F9A8D4, #C084FC)",
               }}
             >
               Connect on LinkedIn
@@ -573,7 +611,7 @@ export default function Portfolio() {
               href="https://github.com/btengland"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white/10 rounded-full font-bold hover:bg-white/20 transition-all"
+              className="px-8 py-4 bg-slate-700/50 rounded-full font-bold hover:bg-slate-600/50 transition-all"
             >
               View GitHub
             </a>
