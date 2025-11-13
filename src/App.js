@@ -37,33 +37,33 @@ export default function Portfolio() {
   };
 
   const skills = [
-    "JavaScript",
+    "Javascript",
     "React",
-    "React Native",
-    "TypeScript",
+    "Jira",
     "Redux",
-    "Remix",
-    "Python",
-    "Ruby",
-    "C++",
-    "Java",
-    "SQL",
-    "HTML",
     "CSS",
     "SASS",
-    "Tailwind",
-    "Bootstrap",
     "Git",
-    "GitHub",
-    "Docker",
-    "AWS",
-    "Sentry",
-    "Figma",
-    "Jira",
+    "Github",
+    "HTML",
+    "Bootstrap",
+    "Reactstrap",
+    "Twilio",
+    "ChartJS",
     "RESTful API",
-    "Cursor AI",
+    "Tailwind",
+    "Typescript",
+    "Remix",
+    "Figma",
+    "Docker",
     "Jules AI",
+    "Cursor AI",
+    "AWS",
+    "React Native",
+    "Sentry",
   ];
+
+  const academicSkills = ["SQL", "Ruby", "C++", "Python", "Java"];
 
   const projectTechnologies = [
     "React Native",
@@ -626,8 +626,29 @@ export default function Portfolio() {
             <Award className="text-purple-400" />
             Skills
           </h2>
+          <h3 className="text-2xl font-bold mb-4 text-purple-400">SKILLS</h3>
           <div className="flex flex-wrap gap-3">
             {skills.map((skill, index) => (
+              <a
+                key={index}
+                href={getSkillUrl(skill)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-pointer"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2))",
+                }}
+              >
+                {skill}
+              </a>
+            ))}
+          </div>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-purple-400">
+            ACADEMIC EXPERIENCE IN
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {academicSkills.map((skill, index) => (
               <a
                 key={index}
                 href={getSkillUrl(skill)}
