@@ -674,19 +674,18 @@ export default function Portfolio() {
                 Design experience
               </li>
               <li className="flex gap-3">
-                <span className="text-purple-400">▹</span> Fluent in Spanish
+                <span className="text-purple-400">▹</span> Professional Digital
+                Marketing Experience
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-400">▹</span> Formal communication
                 training and sales experience
               </li>
               <li className="flex gap-3">
-                <span className="text-purple-400">▹</span> Working knowledge of
-                Facebook Ads and Google Ads
+                <span className="text-purple-400">▹</span> Fluent in Spanish
               </li>
               <li className="flex gap-3">
-                <span className="text-purple-400">▹</span> Content and Inbound
-                Marketing certified through HubSpot
+                <span className="text-purple-400">▹</span> Former Piano Teacher
               </li>
             </ul>
           </div>
