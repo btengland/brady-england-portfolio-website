@@ -729,6 +729,14 @@ export default function Portfolio() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
+              href="https://github.com/btengland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-slate-700/50 rounded-full font-bold hover:bg-slate-600/50 transition-all"
+            >
+              View GitHub
+            </a>
+            <a
               href="https://www.linkedin.com/in/bradyengland/"
               target="_blank"
               rel="noopener noreferrer"
@@ -739,14 +747,6 @@ export default function Portfolio() {
               }}
             >
               Connect on LinkedIn
-            </a>
-            <a
-              href="https://github.com/btengland"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-slate-700/50 rounded-full font-bold hover:bg-slate-600/50 transition-all"
-            >
-              View GitHub
             </a>
           </div>
         </div>
