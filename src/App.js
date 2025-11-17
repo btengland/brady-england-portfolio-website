@@ -341,7 +341,7 @@ export default function Portfolio() {
           >
             Brady England
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-4 animate-fade-in">
+          <p className="text-1xl sm:text-2xl md:text-3xl font-bold text-gray-300 mb-4 animate-fade-in">
             Software Engineer
           </p>
           <p className="text-base md:text-lg text-gray-400 mb-8 animate-fade-in">
@@ -497,7 +497,7 @@ export default function Portfolio() {
                   style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
                 />
                 <p className="text-xs text-gray-400 mt-3 text-center">
-                  Game Tracking
+                  Info & Location
                 </p>
               </div>
               <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
@@ -508,7 +508,7 @@ export default function Portfolio() {
                   style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
                 />
                 <p className="text-xs text-gray-400 mt-3 text-center">
-                  Game Tracking
+                  Skill Tokens & Dice Slots
                 </p>
               </div>
               <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
@@ -519,7 +519,7 @@ export default function Portfolio() {
                   style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
                 />
                 <p className="text-xs text-gray-400 mt-3 text-center">
-                  Game Tracking
+                  Status Updates & Journal
                 </p>
               </div>
             </div>
@@ -727,7 +727,7 @@ export default function Portfolio() {
             I'm always open to discussing new projects, creative ideas, or
             opportunities to be part of your vision.
           </p>
-          <div className="flex gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="https://www.linkedin.com/in/bradyengland/"
               target="_blank"
