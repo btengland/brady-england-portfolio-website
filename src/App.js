@@ -124,14 +124,14 @@ export default function Portfolio() {
       ],
     },
     {
-      title: "Front End Engineer",
+      title: "Frontend Engineer",
       company: "Vitality IO",
       period: "July 2023 - Present",
       points: [
-        "Lead Front-End Developer contributing to a Utility Management application using React",
-        "Collaborate closely with backend team to integrate front-end code",
+        "Lead Frontend Developer contributing to a Utility Management application using React",
+        "Collaborate closely with backend team to integrate frontend code",
         "Contribute to reporting of utility data from buildings to businesses",
-        "Familiar with jQuery for versatile front-end development",
+        "Familiar with jQuery for versatile frontend development",
       ],
     },
     {
@@ -143,7 +143,7 @@ export default function Portfolio() {
       ],
     },
     {
-      title: "Front End Engineer",
+      title: "Frontend Engineer",
       company: "Clear C2",
       period: "April 2022 - June 2022",
       points: [
@@ -341,7 +341,7 @@ export default function Portfolio() {
           >
             Brady England
           </h1>
-          <p className="text-1xl sm:text-2xl md:text-3xl font-bold text-gray-300 mb-4 animate-fade-in">
+          <p className="text-2xl sm:text-2xl md:text-3xl font-bold text-gray-300 mb-4 animate-fade-in">
             Software Engineer
           </p>
           <p className="text-base md:text-lg text-gray-400 mb-8 animate-fade-in">
