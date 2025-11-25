@@ -63,7 +63,7 @@ export default function Portfolio() {
     "Sentry",
   ];
 
-  const academicSkills = ["SQL", "Ruby", "C++", "Python", "Java"];
+  const academicSkills = ["SQL", "Ruby", "C++", "Python", "Java", "Jest"];
 
   const projectTechnologies = [
     "React Native",
