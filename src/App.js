@@ -87,6 +87,7 @@ export default function Portfolio() {
       Ruby: "https://www.ruby-lang.org/en/",
       "C++": "https://isocpp.org/",
       Java: "https://www.java.com/en/",
+      Jest: "https://jestjs.io/",
       SQL: "https://en.wikipedia.org/wiki/SQL",
       HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
