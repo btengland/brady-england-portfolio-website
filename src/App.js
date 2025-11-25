@@ -94,6 +94,7 @@ export default function Portfolio() {
       SASS: "https://sass-lang.com/",
       Tailwind: "https://tailwindcss.com/",
       Bootstrap: "https://getbootstrap.com/",
+      ChartJS: "https://www.chartjs.org/",
       Git: "https://git-scm.com/",
       GitHub: "https://github.com/",
       Docker: "https://www.docker.com/",
