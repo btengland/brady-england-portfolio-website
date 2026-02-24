@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brady-england-portfolio-website/static/css/main.b6e1760f.css",
-    "main.js": "/brady-england-portfolio-website/static/js/main.7d7537c2.js",
+    "main.js": "/brady-england-portfolio-website/static/js/main.5577a25b.js",
     "static/js/453.d8aabe21.chunk.js": "/brady-england-portfolio-website/static/js/453.d8aabe21.chunk.js",
     "static/media/home_screen.png": "/brady-england-portfolio-website/static/media/home_screen.053fe8a6d516fae053ed.png",
     "static/media/game_screen2.png": "/brady-england-portfolio-website/static/media/game_screen2.97c8e2d1ff5cd54a77ff.png",
@@ -9,11 +9,11 @@
     "static/media/game_screen3.png": "/brady-england-portfolio-website/static/media/game_screen3.5033d0d495f3d8ce7c05.png",
     "index.html": "/brady-england-portfolio-website/index.html",
     "main.b6e1760f.css.map": "/brady-england-portfolio-website/static/css/main.b6e1760f.css.map",
-    "main.7d7537c2.js.map": "/brady-england-portfolio-website/static/js/main.7d7537c2.js.map",
+    "main.5577a25b.js.map": "/brady-england-portfolio-website/static/js/main.5577a25b.js.map",
     "453.d8aabe21.chunk.js.map": "/brady-england-portfolio-website/static/js/453.d8aabe21.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6e1760f.css",
-    "static/js/main.7d7537c2.js"
+    "static/js/main.5577a25b.js"
   ]
 }
