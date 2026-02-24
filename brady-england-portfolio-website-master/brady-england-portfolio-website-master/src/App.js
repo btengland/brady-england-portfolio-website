@@ -120,10 +120,13 @@ export default function Portfolio() {
       company: "Freelance",
       period: "July 2025 - Present",
       points: [
-        "Developing a mobile application in React Native within the Cursor AI environment",
-        "Leveraging Google Jules for AI-assisted coding, testing, and debugging",
-        "Monitoring user errors through Sentry",
-        "Building a serverless multiplayer game backend using AWS API Gateway WebSockets, Lambda, and DynamoDB, enabling real-time hosting and joining of game sessions without a traditional backend",
+        "Leveraged AI-assisted development tools to accelerate feature delivery, improve architectural decisions, and reduce debugging time while maintaining production-grade quality.",
+        "Designed and built production mobile applications using React Native and TypeScript, delivering polished frontend experiences that meet all project requirements.",
+        "Shipped applications to the App Store, managing the full release process from initial development through final deployment.",
+        "Architected a serverless real-time backend using AWS API Gateway (WebSockets), Lambda, and DynamoDB to support multiplayer functionality.",
+        "Maintained a focus on frontend architecture, reusable components, clean state management, and responsive UI design.",
+        "Implemented error monitoring with Sentry to proactively track and resolve production issues.",
+        "Published and maintained personal applications, demonstrating strong product ownership and end-to-end development capability.",
       ],
     },
     {
@@ -131,10 +134,15 @@ export default function Portfolio() {
       company: "Vitality IO",
       period: "July 2023 - February 2026",
       points: [
-        "Lead Frontend Developer contributing to a Utility Management application using React",
-        "Collaborate closely with backend team to integrate frontend code",
-        "Contribute to reporting of utility data from buildings to businesses",
-        "Familiar with jQuery for versatile frontend development",
+        "Built and owned nearly the entire frontend of a production Utility Management platform using React and JavaScript.",
+        "Improved application performance through rendering optimization, component refactoring, and state management enhancements.",
+        "Served as the primary frontend resource, guiding architectural decisions and supporting engineers contributing to the UI.",
+        "Championed early adoption of AI-assisted development tools within the engineering team, establishing workflows that increased development velocity and reduced repetitive tasks.",
+        "Leveraged AI tools to accelerate debugging, refactoring, and feature implementation while maintaining production-quality standards.",
+        "Defined frontend standards and best practices to ensure scalability, maintainability, and consistent user experience.",
+        "Created, scoped, and assigned backend tickets to streamline API integration and improve cross-team collaboration.",
+        "Integrated REST APIs to deliver utility reporting and analytics features for business customers.",
+        "Implemented unit testing with Jest to improve stability, reduce regressions, and increase long-term maintainability.",
       ],
     },
     {
@@ -142,7 +150,8 @@ export default function Portfolio() {
       company: "Clear C2",
       period: "June 2022 - July 2023",
       points: [
-        "Development of CRM marketing web application features and designs using Figma",
+        "Designed CRM marketing platform features and workflows using Figma.",
+        "Collaborated closely with engineers to translate UX designs into scalable React components.",
       ],
     },
     {
@@ -150,8 +159,8 @@ export default function Portfolio() {
       company: "Clear C2",
       period: "April 2022 - June 2022",
       points: [
-        "Worked in Remix, ReactJS, JavaScript, TypeScript, Figma, and Tailwind",
-        "Contributed to development of a CRM marketing web application",
+        "Contributed to a CRM marketing web application built with Remix, React, TypeScript, and Tailwind CSS.",
+        "Developed UI components and assisted in feature delivery across the platform.",
       ],
     },
   ];
