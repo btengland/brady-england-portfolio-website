@@ -1,0 +1,791 @@
+import React, { useState, useEffect } from "react";
+import {
+  Github,
+  Linkedin,
+  Phone,
+  MapPin,
+  ChevronDown,
+  Menu,
+  X,
+  Code,
+  Briefcase,
+  GraduationCap,
+  Award,
+} from "lucide-react";
+import homeScreen from "./components/home_screen.png";
+import gameScreen from "./components/game_screen.png";
+import gameScreen2 from "./components/game_screen2.png";
+import gameScreen3 from "./components/game_screen3.png";
+
+export default function Portfolio() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const skills = [
+    "Javascript",
+    "React",
+    "Jira",
+    "Redux",
+    "CSS",
+    "SASS",
+    "Git",
+    "Github",
+    "HTML",
+    "Bootstrap",
+    "Reactstrap",
+    "Twilio",
+    "ChartJS",
+    "RESTful API",
+    "Tailwind",
+    "Typescript",
+    "Jest",
+    "Remix",
+    "Figma",
+    "Docker",
+    "Jules AI",
+    "Cursor AI",
+    "AWS",
+    "React Native",
+    "Sentry",
+  ];
+
+  const academicSkills = ["SQL", "Ruby", "C++", "Python", "Java"];
+
+  const projectTechnologies = [
+    "React Native",
+    "AWS Lambda",
+    "WebSockets",
+    "DynamoDB",
+    "Sentry",
+    "Cursor AI",
+    "Jules AI",
+  ];
+
+  const getSkillUrl = (skill) => {
+    const skillUrls = {
+      JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      React: "https://react.dev/",
+      "React Native": "https://reactnative.dev/",
+      TypeScript: "https://www.typescriptlang.org/",
+      Redux: "https://redux.js.org/",
+      Remix: "https://remix.run/",
+      Python: "https://www.python.org/",
+      Ruby: "https://www.ruby-lang.org/en/",
+      "C++": "https://isocpp.org/",
+      Java: "https://www.java.com/en/",
+      Jest: "https://jestjs.io/",
+      SQL: "https://en.wikipedia.org/wiki/SQL",
+      HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      SASS: "https://sass-lang.com/",
+      Tailwind: "https://tailwindcss.com/",
+      Bootstrap: "https://getbootstrap.com/",
+      ChartJS: "https://www.chartjs.org/",
+      Git: "https://git-scm.com/",
+      GitHub: "https://github.com/",
+      Docker: "https://www.docker.com/",
+      AWS: "https://aws.amazon.com/",
+      "AWS Lambda": "https://aws.amazon.com/lambda/",
+      Sentry: "https://sentry.io/",
+      Figma: "https://www.figma.com/",
+      Jira: "https://www.atlassian.com/software/jira",
+      "RESTful API": "https://restfulapi.net/",
+      WebSockets:
+        "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+      DynamoDB: "https://aws.amazon.com/dynamodb/",
+      "Cursor AI": "https://cursor.sh/",
+      "Jules AI": "https://jules.google/",
+    };
+    return skillUrls[skill] || "#";
+  };
+
+  const experience = [
+    {
+      title: "Software Engineer",
+      company: "Freelance",
+      period: "July 2025 - Present",
+      points: [
+        "Leveraged AI-assisted development tools to accelerate feature delivery, improve architectural decisions, and reduce debugging time while maintaining production-grade quality.",
+        "Designed and built production mobile applications using React Native and TypeScript, delivering polished frontend experiences that meet all project requirements.",
+        "Shipped applications to the App Store, managing the full release process from initial development through final deployment.",
+        "Architected a serverless real-time backend using AWS API Gateway (WebSockets), Lambda, and DynamoDB to support multiplayer functionality.",
+        "Maintained a focus on frontend architecture, reusable components, clean state management, and responsive UI design.",
+        "Implemented error monitoring with Sentry to proactively track and resolve production issues.",
+        "Published and maintained personal applications, demonstrating strong product ownership and end-to-end development capability.",
+      ],
+    },
+    {
+      title: "Frontend Engineer",
+      company: "Vitality IO",
+      period: "July 2023 - February 2026",
+      points: [
+        "Built and owned nearly the entire frontend of a production Utility Management platform using React and JavaScript.",
+        "Improved application performance through rendering optimization, component refactoring, and state management enhancements.",
+        "Served as the primary frontend resource, guiding architectural decisions and supporting engineers contributing to the UI.",
+        "Championed early adoption of AI-assisted development tools within the engineering team, establishing workflows that increased development velocity and reduced repetitive tasks.",
+        "Leveraged AI tools to accelerate debugging, refactoring, and feature implementation while maintaining production-quality standards.",
+        "Defined frontend standards and best practices to ensure scalability, maintainability, and consistent user experience.",
+        "Created, scoped, and assigned backend tickets to streamline API integration and improve cross-team collaboration.",
+        "Integrated REST APIs to deliver utility reporting and analytics features for business customers.",
+        "Implemented unit testing with Jest to improve stability, reduce regressions, and increase long-term maintainability.",
+      ],
+    },
+    {
+      title: "UX Designer",
+      company: "Clear C2",
+      period: "June 2022 - July 2023",
+      points: [
+        "Designed CRM marketing platform features and workflows using Figma.",
+        "Collaborated closely with engineers to translate UX designs into scalable React components.",
+      ],
+    },
+    {
+      title: "Frontend Engineer",
+      company: "Clear C2",
+      period: "April 2022 - June 2022",
+      points: [
+        "Contributed to a CRM marketing web application built with Remix, React, TypeScript, and Tailwind CSS.",
+        "Developed UI components and assisted in feature delivery across the platform.",
+      ],
+    },
+  ];
+
+  const education = [
+    {
+      school: "Western Governors University",
+      degree: "Bachelor of Science in Computer Science",
+      location: "Salt Lake City, Utah",
+      graduated: "May 2023",
+    },
+    {
+      school: "Devmountain",
+      degree: "Full-Stack Web Development Certification",
+      location: "Lehi, Utah",
+      graduated: "April 2021",
+    },
+    {
+      school: "Utah Valley University",
+      degree: "Bachelor of Science in Digital Marketing",
+      location: "Orem, Utah",
+      graduated: "December 2020",
+    },
+  ];
+
+  return (
+    <div
+      className="min-h-screen text-white"
+      style={{
+        background:
+          "linear-gradient(to bottom right, #0F172A, #581C87, #0F172A)",
+      }}
+    >
+      {/* Navigation */}
+      <nav
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled || isMenuOpen
+            ? "bg-slate-900/95 backdrop-blur-sm shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="text-2xl font-bold hover:scale-105 transition-transform"
+            style={{
+              background:
+                "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            BE
+          </button>
+          <div className="hidden md:flex gap-6">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("experience")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection("projects")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Project
+            </button>
+            <button
+              onClick={() => scrollToSection("skills")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Skills
+            </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Education
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="hover:text-purple-400 transition-colors cursor-pointer"
+            >
+              Contact
+            </button>
+          </div>
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
+        </div>
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900/95">
+            <div className="flex flex-col items-center gap-4 py-4">
+              <button
+                onClick={() => {
+                  scrollToSection("about");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                About
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("experience");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("projects");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Project
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("skills");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("education");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Education
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("contact");
+                  setIsMenuOpen(false);
+                }}
+                className="hover:text-purple-400 transition-colors cursor-pointer"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center px-6 pt-40 pb-20"
+      >
+        <div className="max-w-4xl text-center">
+          <div className="mb-8 animate-fade-in">
+            <div
+              className="w-32 h-32 mx-auto mb-8 rounded-full flex items-center justify-center text-5xl font-bold"
+              style={{
+                background:
+                  "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              }}
+            >
+              BE
+            </div>
+          </div>
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animate-fade-in leading-[1.2] pb-3"
+            style={{
+              background:
+                "linear-gradient(to right, #A855F7, #EC4899, #A855F7)",
+              WebkitBackgroundClip: "text",
+              backgroundClip: "text",
+              color: "transparent",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Brady England
+          </h1>
+          <p className="text-2xl sm:text-2xl md:text-3xl font-bold text-gray-300 mb-4 animate-fade-in">
+            Software Engineer
+          </p>
+          <p className="text-base md:text-lg text-gray-400 mb-8 animate-fade-in">
+            Leveraging expertise in user experience & digital marketing
+          </p>
+          <div className="flex gap-4 justify-center mb-12 animate-fade-in">
+            <a
+              href="https://github.com/btengland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+            >
+              <Github size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bradyengland/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+            >
+              <Linkedin size={24} />
+            </a>
+          </div>
+          <button
+            onClick={() => scrollToSection("about")}
+            className="inline-block animate-bounce"
+          >
+            <ChevronDown size={32} className="text-purple-400" />
+          </button>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-6 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-8 flex items-center gap-3">
+            <Code className="text-purple-400" />
+            About Me
+          </h2>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              I’m a software engineer specializing in React and modern web
+              technologies. What sets me apart is my background in UX design and
+              digital marketing, which gives me a deep understanding of user
+              flows and how to build products that truly connect with people. In
+              my current role, I collaborate closely with the backend team to
+              ensure complex utility data is displayed clearly and intuitively
+              for end users; not just developers.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+              <div className="flex items-center gap-3">
+                <MapPin className="text-purple-400" size={20} />
+                <span>Eagle Mountain, UT</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="text-purple-400" size={20} />
+                <span>385-331-6171</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-6 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
+            <Briefcase className="text-purple-400" />
+            Experience
+          </h2>
+          <div className="space-y-8">
+            {experience.map((job, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
+              >
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-purple-400">
+                      {job.title}
+                    </h3>
+                    <p className="text-xl text-gray-300">{job.company}</p>
+                  </div>
+                  <span className="text-gray-400 mt-2 md:mt-0">
+                    {job.period}
+                  </span>
+                </div>
+                <ul className="space-y-2">
+                  {job.points.map((point, idx) => (
+                    <li key={idx} className="text-gray-300 flex gap-3">
+                      <span className="text-purple-400 mt-1">▹</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
+            <Code className="text-purple-400" />
+            Featured Project
+          </h2>
+          <div
+            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400 transition-all shadow-xl"
+            style={{
+              background:
+                "linear-gradient(to bottom right, rgba(192, 132, 252, 0.1), rgba(244, 114, 182, 0.1))",
+            }}
+          >
+            <div className="flex items-start gap-4 mb-6">
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold text-purple-400 mb-2">
+                  Board Game Companion App
+                </h3>
+                <p className="text-lg text-gray-300 mb-4">
+                  A mobile companion app for a Stonemaier Games board game,
+                  built to let players use their physical copies to play
+                  remotely with others. I reached out to Stonemaier Games and
+                  received official specifications and guidelines for
+                  development. The app synchronizes game state in real time
+                  across devices so all players see live updates throughout the
+                  match. I also coordinated a 14-day playtesting period with 20
+                  testers, collected usability and gameplay feedback, and
+                  implemented improvements based on their insights.
+                </p>
+              </div>
+            </div>
+
+            {/* App Screenshots */}
+            <div className="flex justify-center gap-2 mb-6 flex-wrap">
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={homeScreen}
+                  alt="Vantage Connect home screen with Host and Join game options"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Home Screen
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={gameScreen}
+                  alt="Game interface showing player info and real-time tracking"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Info & Location
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={gameScreen2}
+                  alt="Game interface showing player info and real-time tracking"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Skill Tokens & Dice Slots
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10 w-48">
+                <img
+                  src={gameScreen3}
+                  alt="Game interface showing player info and real-time tracking"
+                  className="w-full rounded-lg shadow-lg"
+                  style={{ aspectRatio: "9/19.5", objectFit: "cover" }}
+                />
+                <p className="text-xs text-gray-400 mt-3 text-center">
+                  Status Updates & Journal
+                </p>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="text-xl font-semibold text-purple-300 mb-3">
+                Key Features:
+              </h4>
+              <ul className="space-y-2">
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Real-time multiplayer functionality allowing players to see
+                    each other's updates live
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Created with official permission and guidance from
+                    Stonemaier Games
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Allows players to use the app alongside their physical board
+                    game for synchronized remote play
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Conducted a 14-day playtest with 20 testers and implemented
+                    feedback-driven improvements
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="text-xl font-semibold text-purple-300 mb-3">
+                Technical Implementation:
+              </h4>
+              <ul className="space-y-2">
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Developing mobile application in React Native within the
+                    Cursor AI environment
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Leveraging Google Jules for AI-assisted coding, testing, and
+                    debugging
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Monitoring user errors and performance through Sentry
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Building serverless multiplayer backend using AWS API
+                    Gateway WebSockets, Lambda, and DynamoDB
+                  </span>
+                </li>
+                <li className="text-gray-300 flex gap-3">
+                  <span className="text-purple-400 mt-1">▹</span>
+                  <span>
+                    Enabling real-time hosting and joining of game sessions
+                    without a traditional backend server
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mt-6">
+              {projectTechnologies.map((tech, index) => (
+                <a
+                  key={index}
+                  href={getSkillUrl(tech)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-purple-500/30 rounded-full text-sm border border-purple-400/50 hover:border-purple-400/80 transition-all"
+                >
+                  {tech}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-6 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
+            <Award className="text-purple-400" />
+            Skills
+          </h2>
+          <h3 className="text-2xl font-bold mb-4 text-purple-400">SKILLS</h3>
+          <div className="flex flex-wrap gap-3">
+            {skills.map((skill, index) => (
+              <a
+                key={index}
+                href={getSkillUrl(skill)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-pointer"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2))",
+                }}
+              >
+                {skill}
+              </a>
+            ))}
+          </div>
+          <h3 className="text-2xl font-bold mt-8 mb-4 text-purple-400">
+            ACADEMIC EXPERIENCE IN
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {academicSkills.map((skill, index) => (
+              <a
+                key={index}
+                href={getSkillUrl(skill)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-purple-400/30 hover:border-purple-400 hover:scale-105 transition-all cursor-pointer"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2))",
+                }}
+              >
+                {skill}
+              </a>
+            ))}
+          </div>
+          <div className="mt-12 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold mb-4 text-purple-400">
+              Additional Skills
+            </h3>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Professional UX
+                Design experience
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Professional Digital
+                Marketing experience
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Formal communication
+                training and sales experience
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Fluent in Spanish
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-400">▹</span> Former Piano Teacher
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
+            <GraduationCap className="text-purple-400" />
+            Education
+          </h2>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all"
+              >
+                <h3 className="text-2xl font-bold text-purple-400">
+                  {edu.school}
+                </h3>
+                <p className="text-xl text-gray-300 mt-2">{edu.degree}</p>
+                <div className="flex flex-col md:flex-row md:justify-between mt-3 text-gray-400">
+                  <span>{edu.location}</span>
+                  <span>Graduated {edu.graduated}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-6 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8">Let's Connect</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a
+              href="https://github.com/btengland"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-slate-700/50 rounded-full font-bold hover:bg-slate-600/50 transition-all"
+            >
+              View GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bradyengland/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/50"
+              style={{
+                background:
+                  "linear-gradient(to right, #9B4DD5, #D977AA, #9B4DD5)",
+              }}
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section id="contact" className="bg-slate-900/50">
+        <footer className="py-8 px-6 text-center text-gray-400 border-t border-white/10">
+          <p>© 2025 Brady England. Built with React & Tailwind CSS.</p>
+        </footer>
+      </section>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease-out;
+        }
+      `}</style>
+    </div>
+  );
+}
